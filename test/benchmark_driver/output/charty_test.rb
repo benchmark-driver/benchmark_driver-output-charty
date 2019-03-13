@@ -1,6 +1,6 @@
 require "test_helper"
 
-class BenchmarkDriver::Output::ChartyTest < Minitest::Test
+class BenchmarkDriver::Output::ChartyTest < Test::Unit::TestCase
   def test_that_it_has_a_version_number
     refute_nil ::BenchmarkDriver::Output::Charty::VERSION
   end
