@@ -10,9 +10,13 @@ TODO: Delete this and the text above, and describe your gem
 $ be benchmark-driver examples/single.yml -o charty --rbenv '2.5.3;2.6.2'
 ```
 
+![](https://github.com/284km/benchmark_driver-output-charty/blob/master/images/single.png)
+
 ```
 $ be benchmark-driver examples/multi.yml -o charty --rbenv '2.5.3;2.6.2'
 ```
+
+![](https://github.com/284km/benchmark_driver-output-charty/blob/master/images/multi.png)
 
 ## Installation
 
