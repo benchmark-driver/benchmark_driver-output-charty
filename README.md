@@ -4,6 +4,16 @@ Welcome to your new gem! In this directory, you'll find the files you need to be
 
 TODO: Delete this and the text above, and describe your gem
 
+## Usage
+
+```
+$ be benchmark-driver examples/single.yml -o charty --rbenv '2.5.3;2.6.2'
+```
+
+```
+$ be benchmark-driver examples/multi.yml -o charty --rbenv '2.5.3;2.6.2'
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
