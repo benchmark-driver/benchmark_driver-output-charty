@@ -1,0 +1,8 @@
+prelude: |
+  class Array
+    alias_method :blank?, :empty?
+  end
+  array = []
+benchmark:
+  blank: array.blank?
+loop_count: 10000000
