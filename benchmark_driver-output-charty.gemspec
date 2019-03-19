@@ -1,11 +1,10 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "benchmark_driver/output/charty/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "benchmark_driver-output-charty"
-  spec.version       = BenchmarkDriver::Output::Charty::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["284km"]
   spec.email         = ["k.furuhashi10@gmail.com"]
 
@@ -22,7 +21,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "benchmark_driver", ">= 0.12.0"
-  spec.add_dependency "charty"
+  spec.add_dependency "charty", "0.1.1.dev"
+  spec.add_dependency "matplotlib"
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "test-unit"
