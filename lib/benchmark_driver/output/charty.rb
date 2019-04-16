@@ -24,11 +24,11 @@ class BenchmarkDriver::Output::Charty < BenchmarkDriver::BulkOutput
 
       names = job_context_result[job].keys.map(&:name)
       values = job_context_result[job].values.map { |result| result.values.fetch(metric) }
-      bar = charty.bar do
+      barh = charty.barh do
         series names, values
         ylabel metric.unit
       end
-      bar.render("charty.png")
+      barh.render("charty.png")
     else
       jobs = job_context_result.keys
       values = @contexts.map{|context|
@@ -38,13 +38,13 @@ class BenchmarkDriver::Output::Charty < BenchmarkDriver::BulkOutput
         ]
       }
 
-      bar = charty.bar do
+      barh = charty.barh do
         values.each do |value|
           series *value
         end
         ylabel metric.unit
       end
-      bar.render("charty.png")
+      barh.render("charty.png")
     end
     puts ": #{GRAPH_PATH}"
   end
