@@ -16,7 +16,7 @@ class BenchmarkDriver::Output::Charty < BenchmarkDriver::BulkOutput
   # @param [Array<BenchmarkDriver::Metric>] metrics
   def bulk_output(job_context_result:, metrics:)
     print "rendering graph..."
-    charty = Charty::Plotter.new(:matplot)
+    charty = Charty::Plotter.new(:pyplot)
 
     metric = metrics.first # only one metric is supported for now
     if job_context_result.keys.size == 1
