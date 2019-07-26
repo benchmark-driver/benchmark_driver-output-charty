@@ -28,7 +28,7 @@ class BenchmarkDriver::Output::Charty < BenchmarkDriver::BulkOutput
         series names, values
         ylabel metric.unit
       end
-      barh.render("charty.png")
+      barh.save("charty.png")
     else
       jobs = job_context_result.keys
       values = @contexts.map{|context|
@@ -44,7 +44,7 @@ class BenchmarkDriver::Output::Charty < BenchmarkDriver::BulkOutput
         end
         ylabel metric.unit
       end
-      barh.render("charty.png")
+      barh.save("charty.png")
     end
     puts ": #{GRAPH_PATH}"
   end
