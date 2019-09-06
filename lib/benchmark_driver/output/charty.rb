@@ -4,12 +4,17 @@ require 'benchmark_driver'
 class BenchmarkDriver::Output::Charty < BenchmarkDriver::BulkOutput
   GRAPH_PATH = 'charty.png'
 
+  OPTIONS = {
+    path: ['--output-path PATH', String, "Chart output path (default: #{GRAPH_PATH})"]
+  }
+
   # @param [Array<BenchmarkDriver::Metric>] metrics
   # @param [Array<BenchmarkDriver::Job>] jobs
   # @param [Array<BenchmarkDriver::Context>] contexts
-  def initialize(contexts:, **)
+  def initialize(contexts:, options:, **)
     super
     @contexts = contexts
+    @path = options.fetch(:path, GRAPH_PATH)
   end
 
   # @param [Hash{ BenchmarkDriver::Job => Hash{ BenchmarkDriver::Context => { BenchmarkDriver::Metric => Float } } }] result
@@ -28,7 +33,7 @@ class BenchmarkDriver::Output::Charty < BenchmarkDriver::BulkOutput
         series names, values
         ylabel metric.unit
       end
-      barh.save("charty.png")
+      barh.save(@path)
     else
       jobs = job_context_result.keys
       values = @contexts.map{|context|
@@ -44,9 +49,9 @@ class BenchmarkDriver::Output::Charty < BenchmarkDriver::BulkOutput
         end
         ylabel metric.unit
       end
-      barh.save("charty.png")
+      barh.save(@path)
     end
-    puts ": #{GRAPH_PATH}"
+    puts ": #{@path}"
   end
 
   def with_job(job, &block)

@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "benchmark_driver"
+  spec.add_dependency "benchmark_driver", ">= 0.15.0"
   spec.add_dependency "charty"
   spec.add_dependency "matplotlib"
   spec.add_development_dependency "bundler", "~> 1.17"
