@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Show graph on benchmark_driver using charty.gem}
   spec.description   = %q{Show graph on benchmark_driver using charty.gem}
-  spec.homepage      = "https://github.com/284km/benchmark_driver-output-charty"
+  spec.homepage      = "https://github.com/benchmark-driver/benchmark_driver-output-charty"
   spec.license       = "MIT"
 
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
