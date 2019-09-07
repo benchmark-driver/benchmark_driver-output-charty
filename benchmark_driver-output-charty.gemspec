@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "benchmark_driver-output-charty"
-  spec.version       = "0.1.0"
+  spec.version       = "0.2.0"
   spec.authors       = ["284km"]
   spec.email         = ["k.furuhashi10@gmail.com"]
 
