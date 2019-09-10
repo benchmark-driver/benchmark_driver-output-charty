@@ -13,6 +13,10 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/benchmark-driver/benchmark_driver-output-charty"
   spec.license       = "MIT"
 
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "https://github.com/benchmark-driver/benchmark_driver-output-charty"
+  spec.metadata["changelog_uri"] = "https://github.com/benchmark-driver/benchmark_driver-output-charty/CHANGES.md"
+
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
