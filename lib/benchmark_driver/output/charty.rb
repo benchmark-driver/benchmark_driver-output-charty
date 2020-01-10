@@ -6,7 +6,7 @@ class BenchmarkDriver::Output::Charty < BenchmarkDriver::BulkOutput
   DEFAULT_CHART = 'bar'
 
   OPTIONS = {
-    backend: ['--output-backend BACKEND', Regexp.union(Charty::Backends.names), "Chart backend (default: #{DEFAULT_BACKEND})"],
+    backend: ['--output-backend BACKEND', Regexp.union(Charty::Backends.names), "Chart backend: #{Charty::Backends.names.join(', ')} (default: #{DEFAULT_BACKEND})"],
     chart: ['--output-chart CHART', Regexp.union(['bar', 'box']), "Specify chart type: bar, box (default: #{DEFAULT_CHART})"],
   }
 
