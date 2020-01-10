@@ -25,9 +25,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "benchmark_driver", ">= 0.15.1"
-  spec.add_dependency "charty"
+  spec.add_dependency "charty", ">= 0.2.0"
   spec.add_dependency "matplotlib"
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "test-unit"
+  spec.add_development_dependency "unicode_plot"
 end
